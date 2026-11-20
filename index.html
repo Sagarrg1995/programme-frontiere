@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3158c9" />
+    <meta name="description" content="Programme détaillé du colloque sur trois jours." />
+    <title>Programme du colloque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" id="sous-titre"></p>
+          <h1 id="titre"></h1>
+        </div>
+        <dl class="event-meta">
+          <div><dt>Dates</dt><dd id="dates"></dd></div>
+          <div><dt>Lieu</dt><dd id="lieu"></dd></div>
+          <div id="orga-bloc"><dt>Organisation</dt><dd id="organisateurs"></dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <nav class="toolbar" aria-label="Navigation du programme">
+      <div class="wrap toolbar-inner">
+        <div class="navigation-options">
+          <div class="tabs" role="tablist" aria-label="Journées" id="onglets"></div>
+          <div class="program-options">
+            <div class="view-switch" role="group" aria-label="Mode d’affichage">
+              <button type="button" data-vue="sessions" aria-pressed="true">Par session</button>
+              <button type="button" data-vue="grille" aria-pressed="false">Par salle</button>
+            </div>
+            <label class="favorites-filter">
+              <input type="checkbox" id="favoris-seuls" />
+              <span>Mes favoris</span>
+            </label>
+          </div>
+        </div>
+        <div class="filters">
+          <label class="search-field">
+            <span class="sr-only">Rechercher dans le programme</span>
+            <input type="search" id="recherche" placeholder="Titre, nom, session…" autocomplete="off" />
+          </label>
+          <label class="room-field">
+            <span class="sr-only">Filtrer par salle</span>
+            <select id="filtre-salle"><option value="">Toutes les salles</option></select>
+          </label>
+        </div>
+      </div>
+    </nav>
+
+    <main class="wrap" id="programme" aria-live="polite"></main>
+
+    <footer class="footer">
+      <div class="wrap"><p id="contact"></p></div>
+    </footer>
+
+    <script src="programme.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
